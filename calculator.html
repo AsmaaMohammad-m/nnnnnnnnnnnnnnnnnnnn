@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <input type="text" id="input" disabled>
+        </div>
+        <div class="numbers">
+            <button class="num" value="1">1</button>
+            <button class="num" value="2">2</button>
+            <button class="num" value="3">3</button>
+            <button class="num" value="4">4</button>
+            <button class="num" value="+">+</button>
+
+            <button id="equal">=</button>
+            <button id="clear">Clear</button>
+
+
+
+        </div>
+
+
+    </div>
+
+    <script>
+        var input=document.getElementById("input");
+        var num=document.getElementsByClassName("num");
+        var equal=document.getElementById("equal");
+        var clear=document.getElementById("clear");
+        var i;
+        for( i=0;i<num.length;i++){
+            num[i].onclick=function(){
+            input.value+=this.value;
+        }}
+
+        equal.onclick=function(){
+            input.value=eval(input.value)
+
+        }
+        
+        clear.onclick=function(){
+            input.value="";
+
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
